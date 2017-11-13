@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/mainlayout"
+    tools:context="com.example.ady.virtualwaiter.Main2Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:id="@+id/menuTitle"
+        android:textAlignment="center"
+        android:textSize="20dp"
+
+        />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="5"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plates"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:id="@+id/Plates"
+
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textSize="15sp"
+            android:id="@+id/Price"
+            android:layout_marginLeft="75dp"
+            />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lobster"
+        android:textSize="15sp"
+        android:id="@+id/firstPlate"
+        android:clickable="true"
+        android:onClick="orderItem"
+        android:layout_marginTop="15dp"
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25"
+        android:textSize="15sp"
+        android:id="@+id/firstPrice"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="15dp"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shirmp"
+            android:textSize="15sp"
+            android:id="@+id/secondPlate"
+            android:clickable="true"
+            android:onClick="orderItem"
+            android:layout_marginTop="15dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:textSize="15sp"
+            android:id="@+id/secondPrice"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Octopus"
+            android:textSize="15sp"
+            android:id="@+id/thirdPlate"
+            android:clickable="true"
+            android:onClick="orderItem"
+            android:layout_marginTop="15dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22"
+            android:textSize="15sp"
+            android:id="@+id/thirdPrice"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Limpet"
+            android:textSize="15sp"
+            android:id="@+id/fourthdPlate"
+            android:clickable="true"
+            android:onClick="orderItem"
+            android:layout_marginTop="15dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19"
+            android:textSize="15sp"
+            android:id="@+id/fourthPrice"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="15dp"
+            />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/DisplayIetms"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:width="1dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="15sp"
+        android:textStyle="bold"
+
+        />
+</LinearLayout>
