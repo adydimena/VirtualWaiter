@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:id="@+id/mainlayout"
+    tools:context="com.example.ady.virtualwaiter.Main2Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:id="@+id/menuTitle"
+        android:textAlignment="center"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plates"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:id="@+id/Plates"
+        android:layout_below="@+id/menuTitle"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="15sp"
+        android:id="@+id/Price"
+
+        android:layout_marginLeft="75dp"
+        android:layout_toRightOf="@+id/Plates"
+        android:layout_below="@+id/menuTitle"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/menudisplay"
+        android:layout_below="@+id/Plates"
+        android:scrollbars="vertical"
+        android:height="400dp"
+
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvbill"
+        android:layout_below="@+id/menudisplay"
+        />
+
+
+
+</RelativeLayout>
