@@ -10,6 +10,7 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+
     private DrawerLayout dlayout;
     private ActionBarDrawerToggle btnToggle;
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btnToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
        // getActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
 
@@ -45,5 +47,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,Main3Activity.class);
         startActivity(intent);
 
+    }
+
+    public void togoDatabasepage(MenuItem item) {
+        Intent intent = new Intent(this,Main4Activity.class);
+        startActivity(intent);
     }
 }

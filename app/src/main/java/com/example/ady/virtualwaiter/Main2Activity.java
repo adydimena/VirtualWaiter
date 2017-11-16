@@ -1,5 +1,6 @@
 package com.example.ady.virtualwaiter;
 
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,44 +15,36 @@ public class Main2Activity extends AppCompatActivity {
 
     private List<Double> bill;
     private TextView tvbill;
+    private TextView menudisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         bill = new ArrayList<>();
-        tvbill = findViewById(R.id.DisplayIetms);
+        tvbill = findViewById(R.id.tvbill);
 
-    }
-
-
-    public void orderItem(View view) {
-        TextView dummyBtn = (TextView) view;
-        String dumystrg;
-        double price = 0;
-
-
-
-        dumystrg = dummyBtn.getText().toString();
-
-
-        switch (dumystrg){
-            case "Lobster":
-                price = 25;
-                break;
-            case "Shirmp":
-                price = 15;
-                    break;
-            case "Octopus":
-                price = 22;
-            case "Limpet":
-                price = 19;
+        menudisplay = findViewById(R.id.menudisplay);
+        DadaBaseHelper database = new DadaBaseHelper(this);
+        Cursor result = database.getallgata();
+        if (result.getCount() == 0){
+            menudisplay.setText("Data Base Failed");
+            return;
+        }
+        while(result.moveToNext()){
+            menudisplay.append(result.getString(0));
+            menudisplay.append("                 ");
+            menudisplay.append(result.getString(1));
+            menudisplay.append("\n");
+            menudisplay.append("\n");
 
         }
-        bill.add(price);
-        updatebill(bill);
+
 
     }
+
+
+
     public void updatebill (List<Double> currentBill)
     {
         double bill = 0;

@@ -10,6 +10,11 @@
         android:title="Pay Bill"
         android:onClick="payment"
         />
+    <item android:id="@+id/PopulateMenu"
+        android:icon="@mipmap/ic_file_upload_black_24dp"
+        android:title="Enter Item to the Menu"
+        android:onClick="togoDatabasepage"
+        />
 
 
 </menu>
